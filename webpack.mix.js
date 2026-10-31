@@ -13,7 +13,7 @@ mix.setPublicPath('public')
     .disableNotifications();
 
 // При watch изменения Blade, SCSS и JS обновляют страницу на порту 3000.
-if (mix.inWatch()) {
+if (process.argv.includes('--watch')) {
     mix.browserSync({
         proxy: 'http://127.0.0.1:8000',
         host: '127.0.0.1',

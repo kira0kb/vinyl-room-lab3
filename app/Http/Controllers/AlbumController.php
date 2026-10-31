@@ -88,7 +88,7 @@ class AlbumController extends Controller
             'tracks.*' => ['array:title,duration'],
             'tracks.*.title' => ['nullable', 'required_with:tracks.*.duration', 'string', 'max:150'],
             'tracks.*.duration' => ['nullable', 'required_with:tracks.*.title', 'regex:/^\d{1,2}:[0-5]\d$/'],
-            'cover' => [$editing ? 'nullable' : 'required', 'image', 'mimes:jpg,jpeg,png,webp', 'max:4096', 'dimensions:max_width=4096,max_height=4096'],
+            'cover' => [$editing ? 'nullable' : 'required', 'image', 'mimes:jpg,jpeg,png,webp', 'max:2048', 'dimensions:max_width=4096,max_height=4096'],
         ]);
 
         // Пустые строки формы не сохраняем как композиции.
