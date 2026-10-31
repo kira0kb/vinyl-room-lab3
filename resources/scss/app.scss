@@ -1,0 +1,327 @@
+@use "sass:color";
+@use "sass:list";
+
+// Цвета и дизайн-настройки из лабораторной работы №1.
+$page-bg: #f4efe8;
+$surface: #fffaf3;
+$header-bg: #17151c;
+$text: #211d26;
+$muted: #6f6876;
+$accent: #ef476f;
+$accent-dark: #c52f54;
+$line: #ded5ca;
+$white: #ffffff;
+$album-colors: (#ef476f, #f78c6b, #ffd166, #06d6a0, #118ab2);
+
+@import "bootstrap/scss/functions";
+
+$primary: $accent;
+$body-bg: $page-bg;
+$body-color: $text;
+$link-color: $accent-dark;
+$border-color: $line;
+$card-bg: $surface;
+$card-border-color: $line;
+$card-border-radius: 1rem;
+$btn-border-radius: 999px;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  xxxl: 1500px
+);
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+  xxxl: 1460px
+);
+
+@import "bootstrap/scss/bootstrap";
+
+html { scroll-behavior: smooth; }
+
+body {
+  min-width: 320px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.55;
+}
+
+.site-navbar {
+  background: $header-bg;
+  box-shadow: 0 8px 24px rgba($header-bg, .12);
+
+  .navbar-brand {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+  }
+
+  .nav-link { color: rgba($white, .78); }
+  .nav-link:hover, .nav-link:focus { color: $white; }
+}
+
+.brand-mark,
+.toast-brand-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 2.55rem;
+  height: 2.55rem;
+  border-radius: 50%;
+  background: $accent;
+  color: $white;
+  font: 700 1.4rem/1 Georgia, "Times New Roman", serif;
+  box-shadow: inset 0 0 0 5px rgba($header-bg, .22);
+}
+
+.nav-cta { margin-top: .35rem; }
+
+.intro-section {
+  padding-top: clamp(3.5rem, 8vw, 7rem);
+  padding-bottom: clamp(3rem, 6vw, 5.5rem);
+}
+
+.intro-eyebrow,
+.section-kicker {
+  margin: 0 0 .6rem;
+  color: $accent-dark;
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.intro-section h1 {
+  max-width: 850px;
+  margin: 0;
+  font: 700 clamp(2.2rem, 5vw, 4.25rem)/1.05 Georgia, "Times New Roman", serif;
+  letter-spacing: -.035em;
+}
+
+.intro-copy {
+  max-width: 670px;
+  margin: 1.3rem 0 1.1rem;
+  color: $muted;
+  font-size: clamp(1rem, 1.5vw, 1.16rem);
+}
+
+.intro-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  color: $accent-dark;
+  font-size: .94rem;
+  font-weight: 700;
+  text-decoration: none;
+
+  &:hover { color: $text; }
+}
+
+.collection-section { padding-bottom: clamp(4.5rem, 8vw, 7rem); }
+
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  margin-bottom: 1.65rem;
+
+  h2 {
+    margin: 0;
+    font: 700 clamp(1.8rem, 3vw, 2.6rem)/1.12 Georgia, "Times New Roman", serif;
+    letter-spacing: -.025em;
+  }
+}
+
+.section-note {
+  max-width: 320px;
+  margin: 0 0 .25rem;
+  color: $muted;
+  font-size: .88rem;
+  text-align: right;
+}
+
+.album-card {
+  --album-accent: #{$accent};
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid $line;
+  border-top: 5px solid var(--album-accent);
+  box-shadow: 0 14px 34px rgba($text, .08);
+  transition: transform .2s ease, box-shadow .2s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 42px rgba($text, .13);
+  }
+
+  .card-body { padding: 1.15rem; }
+}
+
+.album-cover {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  background: $header-bg;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .35s ease;
+  }
+}
+
+.album-card:hover .album-cover img { transform: scale(1.035); }
+
+.album-labels {
+  position: absolute;
+  inset: 1rem 1rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: .5rem;
+}
+
+.album-genre {
+  max-width: 75%;
+  overflow-wrap: anywhere;
+  padding: .48rem .65rem;
+  background: var(--album-accent, $accent);
+  color: var(--album-accent-contrast, #{$white});
+  font-size: .68rem;
+  letter-spacing: .045em;
+  text-transform: uppercase;
+}
+
+.album-year {
+  flex: 0 0 auto;
+  padding: .48rem .65rem;
+  background: rgba($header-bg, .88);
+  color: $white;
+  font-size: .68rem;
+  letter-spacing: .04em;
+}
+
+.album-edition {
+  margin: 0 0 .25rem;
+  color: $muted;
+  font-size: .67rem;
+  font-weight: 700;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.album-title {
+  min-height: 2.8rem;
+  margin: 0;
+  font: 700 1.35rem/1.15 Georgia, "Times New Roman", serif;
+  letter-spacing: -.02em;
+  overflow-wrap: anywhere;
+}
+
+.album-artist {
+  margin: .35rem 0 1rem;
+  color: $muted;
+  font-size: .9rem;
+  font-weight: 700;
+}
+
+.track-preview {
+  margin: 0 0 1rem;
+  padding: 0;
+
+  li {
+    display: grid;
+    grid-template-columns: 1.55rem minmax(0, 1fr) auto;
+    align-items: start;
+    gap: .35rem;
+    min-height: 2.2rem;
+    padding: .48rem 0;
+    border-top: 1px solid $line;
+    color: $muted;
+    font-size: .76rem;
+    line-height: 1.35;
+  }
+
+  time { padding-left: .25rem; font-variant-numeric: tabular-nums; white-space: nowrap; }
+}
+
+.track-number {
+  color: $text;
+  font-size: .66rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+.album-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+
+  .btn { flex: 1 1 auto; padding-inline: .75rem; font-size: .82rem; }
+}
+
+.album-stream-link {
+  width: fit-content;
+  margin-top: .85rem;
+  color: $muted;
+  font-size: .72rem;
+  text-decoration: none;
+
+  &:hover { color: $accent-dark; }
+}
+
+@for $i from 1 through list.length($album-colors) {
+  $album-color: list.nth($album-colors, $i);
+  $album-text-color: $white;
+  @if color.channel($album-color, "lightness", $space: hsl) > 65% {
+    $album-text-color: $text;
+  }
+  .album-col:nth-child(5n + #{$i}) .album-card {
+    --album-accent: #{$album-color};
+    --album-accent-contrast: #{$album-text-color};
+  }
+}
+
+.site-footer { border-top: 1px solid $line; }
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem 1.5rem;
+  min-height: 5.5rem;
+  color: $muted;
+  font-size: .8rem;
+
+  p { margin: 0; }
+}
+
+@include media-breakpoint-up(lg) {
+  .nav-cta { margin-top: 0; }
+  .album-card .card-body { padding: 1.25rem; }
+}
+
+@include media-breakpoint-up(xxxl) {
+  .intro-section { padding-top: 7.5rem; }
+  .album-card .card-body { padding: 1.35rem; }
+}
+
+@include media-breakpoint-down(md) {
+  .section-heading { align-items: start; flex-direction: column; }
+  .section-note { max-width: none; text-align: left; }
+}
+
+@include media-breakpoint-down(sm) {
+  .intro-section { padding-top: 3.25rem; }
+  .album-card .card-body { padding: 1rem; }
+  .footer-inner { align-items: start; flex-direction: column; justify-content: center; padding-block: 1.3rem; }
+}

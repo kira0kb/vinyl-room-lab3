@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\AlbumController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::redirect('/', '/albums');
+
+// Один resource создаёт семь маршрутов для CRUD.
+Route::resource('albums', AlbumController::class);

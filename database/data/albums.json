@@ -1,0 +1,122 @@
+[
+  {
+    "title": "AM",
+    "artist": "Arctic Monkeys",
+    "genre": "Инди-рок",
+    "edition": "Пятый студийный альбом",
+    "release_date": "2013-09-09",
+    "description": "На AM гитарный инди-рок Arctic Monkeys встречается с ритмами R&B. Альбом звучит как цельная ночная поездка: плотный бас, сухие ударные и узнаваемый вокал Алекса Тёрнера.",
+    "sound_notes": "В этом альбоме гитарные риффы и блюзовые интонации соединены с размеренным ритмом, характерным для R&B.",
+    "tracks": [
+      {
+        "title": "Do I Wanna Know?",
+        "duration": "4:32"
+      },
+      {
+        "title": "R U Mine?",
+        "duration": "3:21"
+      },
+      {
+        "title": "Arabella",
+        "duration": "3:27"
+      }
+    ],
+    "cover_path": "albums/am.jpg"
+  },
+  {
+    "title": "After Hours",
+    "artist": "The Weeknd",
+    "genre": "R&B",
+    "edition": "Четвёртый студийный альбом",
+    "release_date": "2020-03-20",
+    "description": "After Hours соединяет современный R&B с синтезаторным поп-звучанием. Сквозной сюжет и повторяющиеся музыкальные темы связывают танцевальные синглы с более медленными композициями.",
+    "sound_notes": "Синтезаторы отсылают к поп-музыке 1980-х, а вокальная подача и ритм остаются в поле современного R&B.",
+    "tracks": [
+      {
+        "title": "Blinding Lights",
+        "duration": "3:20"
+      },
+      {
+        "title": "Save Your Tears",
+        "duration": "3:35"
+      },
+      {
+        "title": "After Hours",
+        "duration": "6:01"
+      }
+    ],
+    "cover_path": "albums/after-hours.jpg"
+  },
+  {
+    "title": "Random Access Memories",
+    "artist": "Daft Punk",
+    "genre": "Электроника",
+    "edition": "Четвёртый студийный альбом",
+    "release_date": "2013-05-17",
+    "description": "В Random Access Memories Daft Punk обращаются к диско, фанку и студийной записи живых инструментов. В альбоме участвуют музыканты и продюсеры, чьи партии формируют тёплое аналоговое звучание.",
+    "sound_notes": "Фанк строится на выразительной басовой партии и ритме; здесь эти элементы соединены с электронной обработкой и диско.",
+    "tracks": [
+      {
+        "title": "Give Life Back to Music",
+        "duration": "4:34"
+      },
+      {
+        "title": "Instant Crush",
+        "duration": "5:37"
+      },
+      {
+        "title": "Get Lucky",
+        "duration": "6:09"
+      }
+    ],
+    "cover_path": "albums/ram.jpg"
+  },
+  {
+    "title": "Currents",
+    "artist": "Tame Impala",
+    "genre": "Психоделический поп",
+    "edition": "Третий студийный альбом",
+    "release_date": "2015-07-17",
+    "description": "Currents отмечает переход Tame Impala от гитарного психоделического рока к более электронному поп-звучанию. Плавные переходы и повторяющиеся мотивы делают альбом похожим на непрерывный музыкальный поток.",
+    "sound_notes": "Психоделический поп использует повтор, эффекты и необычные тембры, создавая ощущение изменчивого, многослойного звучания.",
+    "tracks": [
+      {
+        "title": "Let It Happen",
+        "duration": "7:47"
+      },
+      {
+        "title": "The Less I Know the Better",
+        "duration": "3:36"
+      },
+      {
+        "title": "Eventually",
+        "duration": "5:19"
+      }
+    ],
+    "cover_path": "albums/currents.jpg"
+  },
+  {
+    "title": "Melodrama",
+    "artist": "Lorde",
+    "genre": "Арт-поп",
+    "edition": "Второй студийный альбом",
+    "release_date": "2017-06-16",
+    "description": "Melodrama Lorde рассказывает о переменах и взрослении через образ одной ночи. Минималистичные куплеты сменяются насыщенными припевами, а электронная аранжировка подчёркивает контраст настроений.",
+    "sound_notes": "Арт-поп сочетает доступную поп-форму с авторскими решениями в аранжировке, текстах и общей концепции альбома.",
+    "tracks": [
+      {
+        "title": "Green Light",
+        "duration": "3:54"
+      },
+      {
+        "title": "Liability",
+        "duration": "2:52"
+      },
+      {
+        "title": "Perfect Places",
+        "duration": "3:41"
+      }
+    ],
+    "cover_path": "albums/melodrama.jpg"
+  }
+]
